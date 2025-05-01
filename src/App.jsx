@@ -4,7 +4,8 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const [mycolor, setMycolor] = useState("white");
 
   // const countHandlerPlus = () => {
   //   setCount(count + 1);
@@ -30,14 +31,20 @@ function App() {
       <button className="m-2 p-3 text-9xlxl" onClick={() => countHandlerPlus()}>Plus</button>
       <button className="m-2 p-3 text-9xlxl" onClick={() => countHandlerMinus()}>Minus</button> */}
 
-      <div>
-        <div className="  bg-amber-100 h-[500px] w-[600px] rounded-2xl  text-black"> hellow</div>
+      <div className="flex flex-col justify-center items-center gap-2 h-screen bg-gray-600">
+        <div
+          style={{ backgroundColor: mycolor }}
+          className="   h-[500px] w-[600px] rounded-2xl  text-white text-5xl font-bold flex justify-center items-center"
+        >
+          {" "}
+          Hey Color Changer
+        </div>
         <div className="flex justify-center items-center gap-2   w-[600px] ">
-          <button onClick={()=>{}}>Red</button>
-          <button onClick={()=>{}}>Blue</button>
-          <button onClick={()=>{}}>Green</button>
-          <button onClick={()=>{}}>Pink</button>
-          <button onClick={()=>{}}>Yellow</button>
+          <button className="     py-3 px-5 rounded-2xl  bg-red-500   text-white " onClick={() => setMycolor("red")}>Red</button>
+          <button className="     py-3 px-5 rounded-2xl  bg-blue-500   text-white" onClick={() => setMycolor("blue")}>Blue</button>
+          <button className="     py-3 px-5 rounded-2xl  bg-green-500   text-white" onClick={() => setMycolor("green")}>Green</button>
+          <button className="     py-3 px-5 rounded-2xl  bg-pink-500   text-white" onClick={() => setMycolor("pink")}>Pink</button>
+          <button className="     py-3 px-5 rounded-2xl  bg-yellow-500   text-white" onClick={() => setMycolor("yellowgreen")}>Yellow</button>
         </div>
       </div>
     </>
